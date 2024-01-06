@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 import { Urbanist } from "next/font/google";
 
 const font = Urbanist({ subsets: ["latin"] });
-export const apiLink = process.env.NEXT_PUBLIC_API_URL;
+
 export default async function RootLayout({
   children,
 }: {
