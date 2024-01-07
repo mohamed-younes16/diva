@@ -3,27 +3,26 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { motion as m } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "./ui/button";
 import { EmblaOptionsType } from "embla-carousel";
+export const OPTIONS: EmblaOptionsType = {
+  loop: true,
+  skipSnaps: true,
+  duration: 20,
+  dragFree: true,
+};
 const Landing = () => {
-  const OPTIONS: EmblaOptionsType = {
-    loop: true,
-    skipSnaps: true,
-    duration: 20,
-    dragFree: true,
-  };
   return (
-    <div className="pt-36 flex items-center  flex-col gap-6 bg-cover min-h-screen bg-[url(/ssets/landing.png)]">
+    <div className="pt-36 flex items-center  bg-center flex-col gap-6 bg-cover min-h-screen max-md:bg-[url(/assets/landing.png)]">
       <Image height={50} width={200} src={"/assets/logo.svg"} alt="diva logo" />
       <Image
         fill
-        className="-z-10 bg-cover !h-[150dvh] "
+        className="-z-10 bg-cover max-md:hidden !h-[150dvh] "
         src={"/assets/landing.png"}
         alt="diva logo"
       />
@@ -110,8 +109,6 @@ const Landing = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
             </Carousel>
           ))}
         </m.div>

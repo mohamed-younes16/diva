@@ -73,12 +73,12 @@ const Perks = () => {
     },
   ];
   return (
-    <>
+    <div>
       <div
         className="h-[65dvh] flex  items-center
-       flex-wrap bg-c  max-md:bg-[#12131e] 
-       max-md:pt-16 pt-4 mt-24 flex-col gap-36
-        bg-[length:105dvw] m bg-[url(/assets/pattern.svg)] bg-no-repeat max-md:bg-contain"
+       flex-wrap  
+       max-md:pt-16 pt-24 flex-col gap-36
+        bg-[length:105dvw]  m bg-[url(/assets/pattern.svg),linear-gradient(0deg,#12131e_24%,transparent)] bg-no-repeat"
       >
         <div className="w-full">
           <p className="text-center mb-4"> Our works has been featured by</p>
@@ -247,7 +247,7 @@ const Perks = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
