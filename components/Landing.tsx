@@ -56,7 +56,7 @@ const Landing = () => {
         Feel free to ask for changes a bazillion times —we've got you covered!
       </m.h1>
       <div
-        className="py-6 relative gg  max-md:mx-2    rounded-2xl  
+        className="py-6 relative  overflow-  max-md:mx-2    rounded-2xl  
       
       pb-24 flex items-center flex-col   "
       >

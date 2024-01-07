@@ -58,15 +58,18 @@ const Perks = () => {
   };
   return (
     <>
-      <div className="h-[70dvh] flex  items-center flex-wrap  max-md:bg-[#12131e] max-md:mt-16 pt-4 mt-24 flex-col gap-36 bg-cover m bg-[url(/assets/pattern.svg)] bg-no-repeat max-md:bg-contain">
+      <div className="h-[65dvh] flex  items-center
+       flex-wrap bg-c  max-md:bg-[#12131e] 
+       max-md:pt-16 pt-4 mt-24 flex-col gap-36
+        bg-[length:105dvw] m bg-[url(/assets/pattern.svg)] bg-no-repeat max-md:bg-contain">
         <div className="w-full">
           <p className="text-center mb-4"> Our works has been featured by</p>
           <div className="flex gap-6 w-full  ">
-            <Carousel opts={OPTIONS} className="w-full flexcenter  border-none">
+            <Carousel opts={OPTIONS} className="w-full max-w-6xl mx-auto flexcenter  border-none">
               <CarouselContent className="  ">
                 {featuredBy.map((e, i) => (
                   <CarouselItem
-                    className="  max-w-[120px] mx-16 max-md:mx-4 !ring-0 
+                    className="  max-w-[120px] mx-12 max-md:mx-4 !ring-0 
                 !shadow-none border-none h-fit  w !outline-none  relative"
                     key={i}
                   >
@@ -84,7 +87,7 @@ const Perks = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]">
           <m.h1
             initial={{ opacity: 0, x: 100 }}
             transition={{
@@ -120,12 +123,12 @@ const Perks = () => {
         <div className=" grid  max-w-[1400px] mx-auto gap-4  grid-cols-[repeat(auto-fill_,_minmax(410px_,1fr))]  justify-center  ">
           {cards.map((e) => (
             <div
-              className="px-10 h-[416px] mx-auto w-[410px]
+              className="px-10 max-lg:h-[350px] max-lg:w-[370px] h-[416px] mx-auto w-[410px]
               flexcenter bg-cover  transition-all rounded-3xl  duration-300  hover:scale-[101%]
              bg-[url(/assets/card.png)]  flex-col"
             >
               <Image alt="" height={100} width={100} src={`/assets${e.icon}`} />
-              <h3 className="mt-10 mb-7 text-center text-2xl font-semibold">
+              <h3 className="mt-10 mb-7 text-center max-lg:mt-6 text-2xl font-semibold">
                 {e.title}
               </h3>
               <p className="text-[#ECECEC] text-center  ">{e.desc}</p>
