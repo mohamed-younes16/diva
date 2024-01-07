@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 
 import { EmblaOptionsType } from "embla-carousel";
+import Heading from "./Heading";
+import { Button } from "./ui/button";
 
 const Perks = () => {
   const featuredBy = [
@@ -56,16 +58,35 @@ const Perks = () => {
     duration: 20,
     dragFree: true,
   };
+  const howitworks = [
+    {
+      title: "Sign up and make request",
+      desc: "After completing the sign-up process, you'll be granted access to your very own Trello board where you can freely submit endless design requests.",
+    },
+    {
+      title: "Working on design",
+      desc: "Our team is committed to gettin' it done, with an impressive turnaround time of just 3 working days per request.",
+    },
+    {
+      title: "Sign up and make request",
+      desc: "After completing the sign-up process, you'll be granted access to your very own Trello board where you can freely submit endless design requests.",
+    },
+  ];
   return (
     <>
-      <div className="h-[65dvh] flex  items-center
+      <div
+        className="h-[65dvh] flex  items-center
        flex-wrap bg-c  max-md:bg-[#12131e] 
        max-md:pt-16 pt-4 mt-24 flex-col gap-36
-        bg-[length:105dvw] m bg-[url(/assets/pattern.svg)] bg-no-repeat max-md:bg-contain">
+        bg-[length:105dvw] m bg-[url(/assets/pattern.svg)] bg-no-repeat max-md:bg-contain"
+      >
         <div className="w-full">
           <p className="text-center mb-4"> Our works has been featured by</p>
           <div className="flex gap-6 w-full  ">
-            <Carousel opts={OPTIONS} className="w-full max-w-6xl mx-auto flexcenter  border-none">
+            <Carousel
+              opts={OPTIONS}
+              className="w-full max-w-6xl mx-auto flexcenter  border-none"
+            >
               <CarouselContent className="  ">
                 {featuredBy.map((e, i) => (
                   <CarouselItem
@@ -119,7 +140,7 @@ const Perks = () => {
           </m.h1>
         </div>
       </div>
-      <div className="min-h-[150dvh]   bg-[linear-gradient(180deg_,_#12131e_80%,transparent)] bg-cover">
+      <div className="pb-20  bg-[linear-gradient(180deg_,_#12131e_80%,transparent)] bg-cover">
         <div className=" grid  max-w-[1400px] mx-auto gap-4  grid-cols-[repeat(auto-fill_,_minmax(410px_,1fr))]  justify-center  ">
           {cards.map((e) => (
             <div
@@ -134,6 +155,96 @@ const Perks = () => {
               <p className="text-[#ECECEC] text-center  ">{e.desc}</p>
             </div>
           ))}
+        </div>
+        <div>
+          <div className="flexcenter mt-20 flex-col gap-4">
+            <Heading
+              title="How does DIVADSGN work?"
+              desc="You can effortlessly throw in, organize, and keep tabs on all your requests using your very own Trello board."
+            />
+            <div className="flexcenter mt-9 flex-col  gap-7 px-6">
+              {howitworks.map((e, i) => (
+                <div
+                  className={`flex relative z-20 items-center  w-full gap-16 max-md:gap-6 ${
+                    i % 2 === 0 && "flex-row-reverse"
+                  }`}
+                >
+                  <div className="flex-1">
+                    <m.h1
+                      initial={{ opacity: 0, x: 100 }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 250,
+                        damping: 15,
+                      }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      className=" font-bold mb-7  max-md:text-xl text-2xl max-w-3xl"
+                    >
+                      {e.title}
+                    </m.h1>
+                    <m.h1
+                      initial={{ opacity: 0, x: -100 }}
+                      transition={{
+                        duration: 1,
+                        type: "spring",
+                        stiffness: 250,
+                        damping: 15,
+                      }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      className=" max-md:text-sm   text-accent max-w-md"
+                    >
+                      {e.desc}
+                    </m.h1>
+                  </div>
+                  <div className="flex-1">
+                    <Image
+                      src={`/assets/itworks${i + 1}.svg`}
+                      alt=" "
+                      height={400}
+                      width={400}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="h-[40vh] border-zinc-400 border-[1px] px-4 relative mt-10 flexcenter flex-col gap-6 bg-cover bg-[#acacac28] w-[80dvw] max-w-5xl mx-auto  rounded-xl">
+            <div className="absolute  w-full h-36  blur-xl -top-[30%] -z-10 bg-blue-400/30 rounded-full"></div>
+            <m.h1
+              initial={{ opacity: 0, x: 100 }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                stiffness: 250,
+                damping: 15,
+              }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className=" font-bold text-center max-md:text-3xl text-5xl max-w-3xl"
+            >
+              We'll join your squad, putting the collab in collaboration.
+            </m.h1>
+            <m.h1
+              initial={{ opacity: 0, x: -100 }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                stiffness: 250,
+                damping: 15,
+              }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className=" text-center text-accent max-w-md"
+            >
+              Manage your requests like a boss with our oh-so-fabulous feature.
+            </m.h1>
+            <Button className="rounded-full bg-[linear-gradient(50deg,#FF536B,#FF536B)] ">
+              Book 15-min call{" "}
+            </Button>
+          </div>
         </div>
       </div>
     </>

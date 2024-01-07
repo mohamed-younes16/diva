@@ -8,7 +8,7 @@ export const metadata = {
 export default async function Home() {
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Landing />
       <Perks />
       
