@@ -103,7 +103,7 @@ const Landing = () => {
                     <Image
                       alt=""
                       className="border-none bg-contain "
-                      src={`/assets/card-${3 * index + i}.svg`}
+                      src={`/assets/Card-${3 * index + i}.svg`}
                       height={250}
                       width={300}
                     />
