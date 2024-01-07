@@ -2,8 +2,8 @@ import Landing from "@/components/Landing";
 import Perks from "@/components/Perks";
 
 export const metadata = {
-  title: "E-commerce Store",
-  description: "Storeapp",
+  title: "DIVA design",
+  description: "Diva design",
 };
 export default async function Home() {
 
