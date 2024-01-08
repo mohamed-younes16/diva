@@ -22,9 +22,6 @@ p.desc {
 .flexcenter {
   @apply flex justify-center items-center;
 }
-.carousel button {
-  display: none !important;
-}
 
 html.lenis {
   height: auto;

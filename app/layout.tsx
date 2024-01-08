@@ -1,9 +1,7 @@
-import { ThemeProvider } from "@/components/ui/theme-provider";
-import "@radix-ui/themes/styles.css";
 import { ReactNode } from "react";
 import "./globals.css";
 import { Toaster } from "sonner";
-import { Urbanist, } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import NavBar from "@/components/NavBar";
 
 const font = Urbanist({ subsets: ["latin"] });
@@ -14,11 +12,8 @@ export default async function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html  lang="en" className={`${font.className} `}>
-      <body
-      
-        className="  min-h-screen text-white bg-[#1E1414] "
-      >
+    <html lang="en" className={`${font.className} `}>
+      <body className="  min-h-screen text-white bg-[#1E1414] ">
         <Toaster richColors position="top-center" />
         <NavBar />
         {children}

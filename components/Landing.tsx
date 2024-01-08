@@ -3,7 +3,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { motion as m } from "framer-motion";
@@ -23,7 +22,8 @@ const Landing = () => {
       <Image
         fill
         className="-z-10 bg-cover max-md:hidden !h-[150dvh] "
-        src={"/assets/landing.png"}
+        src={"/assets/landing-min.webp"}
+        loading="eager"
         alt="diva logo"
       />
       <m.h1
@@ -60,14 +60,15 @@ const Landing = () => {
       pb-24 flex items-center flex-col   "
       >
         <Image
-          alt=" "
+          loading="eager"
+          alt="image"
           fill
           className="-z-10 backdrop-blur-xl"
-          src={"/assets/carousel.png"}
+          src={"/assets/carousel-min.png"}
         />
 
         <m.div
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0 }}
           transition={{
             duration: 1,
             delay: 0.5,
@@ -75,7 +76,7 @@ const Landing = () => {
             stiffness: 250,
             damping: 15,
           }}
-          whileInView={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className=" max-w-[800px] flexcenter flex-col  gap-6 overflow-hidden"
         >
@@ -96,13 +97,14 @@ const Landing = () => {
                 {Array.from({ length: 4 }).map((_, i) => (
                   <CarouselItem
                     className="  basis-1/3 !ring-0 
-                !shadow-none border-none h-fit min-w-[40%] !outline-none  relative"
+                !shadow-none h-[250px] w-[300px] border-none  min-w-[40%] !outline-none  relative"
                     key={i}
                   >
                     <Image
-                      alt=""
+                      loading="eager"
+                      alt="image"
                       className="border-none bg-contain "
-                      src={`/assets/Card-${3 * index + i}.svg`}
+                      src={`/assets/Card-${3 * index + i}.png`}
                       height={250}
                       width={300}
                     />

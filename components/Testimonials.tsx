@@ -10,6 +10,7 @@ import {
 import { OPTIONS } from "./Landing";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
   const data = [
@@ -42,16 +43,34 @@ const Testimonials = () => {
       post: "Entrepreneurs",
     },
   ];
+  const [api, setApi]: any = useState();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+    console.log(api.selectedScrollSnap());
+  }, [api]);
   return (
     <div className="w-full flexcenter flex-col gap-14 mb-32">
       <h1 className="text-4xl font-bold">What clients say about us</h1>
-      <Carousel opts={OPTIONS} className="w-full max-w-7xl ">
+      <Carousel setApi={setApi} opts={OPTIONS} className="w-full max-w-7xl ">
         <CarouselContent>
           {data.map((e, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/3 mx-6 pb-8 max-sm:basis-2/3 border-b-[#5D4343] border-b-[2px]"
+              className={`basis-1/3 mx-6 transition-[opcaity]  pb-8 max-sm:basis-2/3
+              ${current !== index + 1 && "opacity-30"}
+               border-b-[#5D4343] border-b-[2px]`}
             >
               <div className="p-1 min-h-[40dvh]  flexcenter gap-4 flex-col ">
                 <p className="text-secondary text-center max-w-sm">
@@ -62,7 +81,7 @@ const Testimonials = () => {
                 </p>
                 <Image
                   src={`/assets/${e.icon}`}
-                  alt=""
+                  alt="image"
                   height={50}
                   width={50}
                 />
@@ -73,7 +92,10 @@ const Testimonials = () => {
               </p>
               <div className="flexcenter gap-2">
                 {Array.from({ length: e.rating }).map((e, i) => (
-                  <Star className="text-yellow-500 fill-yellow-400 h-8 w-8 " />
+                  <Star
+                    key={i}
+                    className="text-yellow-500 fill-yellow-400 h-8 w-8 "
+                  />
                 ))}
               </div>
             </CarouselItem>

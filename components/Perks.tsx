@@ -148,10 +148,10 @@ const Perks = () => {
               flexcenter bg-cover  transition-all rounded-3xl  duration-300  hover:scale-[101%]
              bg-[url(/assets/card.png)]  flex-col"
             >
-              <Image alt="" height={100} width={100} src={`/assets${e.icon}`} />
-              <h3 className="mt-10 mb-7 text-center max-lg:mt-6 text-2xl font-semibold">
+              <Image alt="image" height={100} width={100} src={`/assets${e.icon}`} />
+              <p className="mt-10 mb-7 text-center max-lg:mt-6 text-2xl font-semibold">
                 {e.title}
-              </h3>
+              </p>
               <p className="text-[#ECECEC] text-center  ">{e.desc}</p>
             </div>
           ))}
@@ -202,7 +202,7 @@ const Perks = () => {
                   <div className="flex-1">
                     <Image
                       src={`/assets/itworks${i + 1}.svg`}
-                      alt=" "
+                      alt="image"
                       height={400}
                       width={400}
                     />
