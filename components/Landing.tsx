@@ -9,8 +9,6 @@ import { motion as m } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "./ui/button";
 import { EmblaOptionsType } from "embla-carousel";
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
 export const OPTIONS: EmblaOptionsType = {
   loop: true,
   skipSnaps: true,
@@ -18,16 +16,7 @@ export const OPTIONS: EmblaOptionsType = {
   dragFree: true,
 };
 const Landing = () => {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+ 
 
   return (
     <div className="pt-36 flex items-center  bg-center flex-col gap-6 bg-cover min-h-screen max-md:bg-[url(/assets/landing.png)]">

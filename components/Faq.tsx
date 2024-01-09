@@ -174,7 +174,7 @@ back in case you were curious."
           <span className="text-zinc-400/80">Privacy Policy </span>
           <span className="text-zinc-400/80">Terms of Use</span>
         </p>
-        <div className="flex-1 flexcenter gap-4 py-4">
+        <div className=" flex w-fit  gap-4 py-4">
           {socialLinks.map((e, i) => (
             <Link
             target={"_blank"}

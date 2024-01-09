@@ -6,6 +6,10 @@ import NavBar from "@/components/NavBar";
 
 const font = Urbanist({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "DIVA design",
+  description: "Diva design",
+};
 export default async function RootLayout({
   children,
 }: {

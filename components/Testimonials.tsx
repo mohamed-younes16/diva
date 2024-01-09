@@ -56,7 +56,9 @@ const Testimonials = () => {
     });
   }, [api]);
   return (
-    <div id="testimonials" className="w-full flexcenter flex-col gap-14 mb-32">
+    <div id="testimonials" className="w-full relative flexcenter flex-col gap-14 mb-32">
+            <div className="absolute    blur-2xl !duration-5000  top-0 w-[50vw] opacity-30 right-0 h-[40dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
+            <div className="absolute    blur-2xl !duration-5000  bottom-0 w-[50vw] opacity-30 left-0 h-[40dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
       <h1 className="text-4xl font-bold text-center">What clients say about us</h1>
       <Carousel setApi={setApi} opts={OPTIONS} className="w-full max-w-7xl ">
         <CarouselContent>
