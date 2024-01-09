@@ -55,8 +55,8 @@ No money surprises here!"
         />
       </div>
       <div className="py-16 max-md:px-4 max-xl:flex-col  max-xl:gap-6 relative flexcenter">
-        <div className="absolute blur-2xl  duration-5000  -bottom-1/2 max-h-[100dvh] rounded-full w-1/2 opacity-20 left-0 h-full bg-cover bg-red-500/30"></div>
-        <div className="absolute  animate-pulse blur-2xl duration-5000  top-0 w-[60vw] opacity-40 right-0 h-[70dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
+        <div className="absolute blur-2xl  duration-5000  -bottom-1/2 max-md:bottom-0 max-h-[100dvh] rounded-full w-1/2 opacity-20 left-0 h-full bg-cover bg-red-500/30"></div>
+        <div className="absolute  lg:animate-pulse blur-2xl duration-5000  top-0 w-[60vw] opacity-40 right-0 h-[70dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
         {data.map((e, i) => (
           <div
             className={`backdrop-blur-lg hover:z-30   hover:-translate-y-2 hover: transition-all 

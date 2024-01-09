@@ -8,7 +8,9 @@
   --line-height: 20px;
   --element-height: calc(var(--lines-count) * var(--line-height));
 }
-
+html {
+  scroll-behavior: smooth;
+}
 p.desc {
   padding: 0; /* <------ optional */
   height: var(--element-height); /* <------ optional */
