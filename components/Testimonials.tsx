@@ -45,20 +45,15 @@ const Testimonials = () => {
   ];
   const [api, setApi]: any = useState();
   const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-
   useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
-    console.log(api.selectedScrollSnap());
   }, [api]);
   return (
     <div className="w-full flexcenter flex-col gap-14 mb-32">

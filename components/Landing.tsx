@@ -21,7 +21,7 @@ const Landing = () => {
       <Image height={50} width={200} src={"/assets/logo.svg"} alt="diva logo" />
       <Image
         fill
-        className="-z-10 bg-cover max-md:hidden !h-[150dvh] "
+        className="-z-10 bg-cover max-md:hidden !h-fit "
         src={"/assets/landing-min.webp"}
         loading="eager"
         alt="diva logo"
@@ -54,9 +54,21 @@ const Landing = () => {
       >
         Feel free to ask for changes a bazillion times —we've got you covered!
       </m.h1>
+      <Button className="rounded-full bg-[linear-gradient(50deg,#FF536B,#FF536B)] ">
+              Book 15-min call{" "}
+            </Button>
+            <div className="flexcenter gap-3">
+              <Image
+                src={`/assets/sand-clock.svg`}
+                height={30}
+                width={30}
+                alt="sand clock"
+              />
+              <p>2 slots remaining</p>
+            </div>
       <div
         className="py-6 relative  overflow-  max-md:mx-2    rounded-2xl  
-      
+       bg-zinc-400/10
       pb-24 flex items-center flex-col   "
       >
         <Image
@@ -64,7 +76,7 @@ const Landing = () => {
           alt="image"
           fill
           className="-z-10 backdrop-blur-xl"
-          src={"/assets/carousel-min.png"}
+          src={"/assets/carousel-min.webp"}
         />
 
         <m.div
@@ -78,7 +90,7 @@ const Landing = () => {
           }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className=" max-w-[800px] flexcenter flex-col  gap-6 overflow-hidden"
+          className=" max-w-[800px] max-md:max-w-[95dvw] flexcenter flex-col  gap-6 overflow-hidden"
         >
           {Array.from({ length: 3 }).map((_, index) => (
             <Carousel
@@ -94,17 +106,18 @@ const Landing = () => {
               className="w-full flexcenter  border-none"
             >
               <CarouselContent className="  ">
-                {Array.from({ length: 4 }).map((_, i) => (
+                {Array.from({ length: 4 }).map((_, i) =>(
+
                   <CarouselItem
                     className="  basis-1/3 !ring-0 
-                !shadow-none h-[250px] w-[300px] border-none  min-w-[40%] !outline-none  relative"
+                !shadow-none h-[250px] max-md:h-[110px] max-md:w-[125px] w-[300px] border-none  min-w-[40%] !outline-none  relative"
                     key={i}
                   >
                     <Image
                       loading="eager"
                       alt="image"
                       className="border-none bg-contain "
-                      src={`/assets/Card-${3 * index + i}.png`}
+                      src={`/assets/Card-${4 * index + i}.webp`}
                       height={250}
                       width={300}
                     />
@@ -120,6 +133,7 @@ const Landing = () => {
           view recent works{" "}
         </Button>
       </div>
+      
     </div>
   );
 };

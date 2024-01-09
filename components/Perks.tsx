@@ -144,11 +144,17 @@ const Perks = () => {
         <div className=" grid  max-w-[1400px] mx-auto gap-4  grid-cols-[repeat(auto-fill_,_minmax(410px_,1fr))]  justify-center  ">
           {cards.map((e) => (
             <div
+              key={e.title}
               className="px-10 max-lg:h-[350px] max-lg:w-[370px] h-[416px] mx-auto w-[410px]
               flexcenter bg-cover  transition-all rounded-3xl  duration-300  hover:scale-[101%]
              bg-[url(/assets/card.png)]  flex-col"
             >
-              <Image alt="image" height={100} width={100} src={`/assets${e.icon}`} />
+              <Image
+                alt="image"
+                height={100}
+                width={100}
+                src={`/assets${e.icon}`}
+              />
               <p className="mt-10 mb-7 text-center max-lg:mt-6 text-2xl font-semibold">
                 {e.title}
               </p>
@@ -165,6 +171,7 @@ const Perks = () => {
             <div className="flexcenter mt-9 flex-col  gap-7 px-6">
               {howitworks.map((e, i) => (
                 <div
+                  key={i}
                   className={`flex relative z-20 items-center  w-full gap-16 max-md:gap-6 ${
                     i % 2 === 0 && "flex-row-reverse"
                   }`}
@@ -244,6 +251,7 @@ const Perks = () => {
             <Button className="rounded-full bg-[linear-gradient(50deg,#FF536B,#FF536B)] ">
               Book 15-min call{" "}
             </Button>
+            
           </div>
         </div>
       </div>

@@ -58,6 +58,11 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      transitionDuration: {
+        "4000": "4000ms",
+        "3000": "3000ms",
+        "5000": "5000ms",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

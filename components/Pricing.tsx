@@ -1,7 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
-import Image from "next/image";
-import { Check, CheckCircleIcon, DollarSign } from "lucide-react";
+import { CheckCircleIcon, DollarSign } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Pricing = () => {
@@ -56,31 +55,32 @@ No money surprises here!"
         />
       </div>
       <div className="py-16 max-md:px-4 max-xl:flex-col  max-xl:gap-6 relative flexcenter">
-        <div className="absolute blur-md bottom-0 w-[40dvw] opacity-40 left-0 h-[50dvh] bg-cover bg-[url(/assets/blurRed.svg)] "></div>
-        <div className="absolute blur-2xl  top-0 w-[40vw] opacity-40 right-0 h-[50dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
+        <div className="absolute blur-2xl  duration-5000  -bottom-1/2 max-h-[100dvh] rounded-full w-1/2 opacity-20 left-0 h-full bg-cover bg-red-500/30"></div>
+        <div className="absolute  animate-pulse blur-2xl duration-5000  top-0 w-[60vw] opacity-40 right-0 h-[70dvh] bg-cover bg-[url(/assets/blurBlue.svg)] "></div>
         {data.map((e, i) => (
           <div
-            className={` backdrop-blur-lg 
+            className={`backdrop-blur-lg hover:z-30   hover:-translate-y-2 hover: transition-all 
+         
           ${
             i === 1
-              ? "z-40 border-red-500/40 bg-red-300/5 bg-[url(/assets/premium.png)  min-h-[80dvh] !shadow-red-600/30 transition-all shadow-lg hover:shadow-xl"
-              : "min-h-[75dvh] border-white/30"
+              ? "z-20 border-red-500/40 bg-red-300/5 bg-[url(/assets/premium.png)  min-h-[80dvh] !shadow-red-600/30 transition-all shadow-lg hover:shadow-xl"
+              : "min-h-[75dvh]  border-white/30  z-10  bg-zinc-400/10"
           } ${
               i >= 1 && "xl:-ml-6 "
             } border-[1px] rounded-2xl   bg-cover relative p-7  `}
           >
-            <p className="text-3xl gap-3 flex items-center mb-14">
+            <div className="text-3xl gap-3 flex items-center mb-14">
               {e.tier}
               {i === 1 && (
                 <p className="bg-blue-600 p-1 rounded-lg text-lg">Popular</p>
               )}{" "}
-            </p>
+            </div>
             <p className="text-secondary/80 max-h border-b-[1px] pb-6 border-b-zinc-400/50 max-w-sm">
               {e.desc}{" "}
             </p>
             <div className="flex items-center mt-6">
               <DollarSign className="w-5 h-5  self-start" />
-              <h4 className="text-4xl font- font-bold">{e.price} </h4>
+              <p className="text-4xl font- font-bold">{e.price} </p>
               <div className="self-end text-secondary/80">/mo</div>
             </div>
             <p className="text-secondary/70 text-sm  mt-2  ">
