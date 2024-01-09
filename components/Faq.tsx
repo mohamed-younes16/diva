@@ -90,7 +90,7 @@ const Faq = () => {
       icon: "works.svg",
     },
     {
-      title: "Benifitsv",
+      title: "Benifits",
       desc: "You'll get stress-free design like magic, delivering consistent quality at a steady price.",
       icon: "benefits.svg",
     },
@@ -168,8 +168,8 @@ back in case you were curious."
           </div>
         ))}
       </div>
-      <div className="mt-16 flex justify-between px-5 py-6 max-w-7xl mx-auto items-center">
-        <p className="flexcenter gap-6">
+      <div className="mt-16 flex flex-wrap justify-between px-5 py-6 max-w-7xl mx-auto items-center">
+        <p className="flexcenter max-md:gap-2 gap-6">
           Copyright © 2023 DIVADSGN. All rights reserved
           <span className="text-zinc-400/80">Privacy Policy </span>
           <span className="text-zinc-400/80">Terms of Use</span>

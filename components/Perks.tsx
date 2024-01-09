@@ -108,7 +108,7 @@ const Perks = () => {
           </div>
         </div>
 
-        <div className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]">
+        <div  id="benifits" className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]">
           <m.h1
             initial={{ opacity: 0, x: 100 }}
             transition={{
@@ -163,7 +163,7 @@ const Perks = () => {
           ))}
         </div>
         <div>
-          <div className="flexcenter mt-20 flex-col gap-4">
+          <div id="work" className="flexcenter  mt-20 flex-col gap-4">
             <Heading
               title="How does DIVADSGN work?"
               desc="You can effortlessly throw in, organize, and keep tabs on all your requests using your very own Trello board."

@@ -9,6 +9,8 @@ import { motion as m } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "./ui/button";
 import { EmblaOptionsType } from "embla-carousel";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 export const OPTIONS: EmblaOptionsType = {
   loop: true,
   skipSnaps: true,
@@ -16,6 +18,17 @@ export const OPTIONS: EmblaOptionsType = {
   dragFree: true,
 };
 const Landing = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <div className="pt-36 flex items-center  bg-center flex-col gap-6 bg-cover min-h-screen max-md:bg-[url(/assets/landing.png)]">
       <Image height={50} width={200} src={"/assets/logo.svg"} alt="diva logo" />
@@ -55,17 +68,17 @@ const Landing = () => {
         Feel free to ask for changes a bazillion times —we've got you covered!
       </m.h1>
       <Button className="rounded-full bg-[linear-gradient(50deg,#FF536B,#FF536B)] ">
-              Book 15-min call{" "}
-            </Button>
-            <div className="flexcenter gap-3">
-              <Image
-                src={`/assets/sand-clock.svg`}
-                height={30}
-                width={30}
-                alt="sand clock"
-              />
-              <p>2 slots remaining</p>
-            </div>
+        Book 15-min call{" "}
+      </Button>
+      <div className="flexcenter gap-3">
+        <Image
+          src={`/assets/sand-clock.svg`}
+          height={30}
+          width={30}
+          alt="sand clock"
+        />
+        <p>2 slots remaining</p>
+      </div>
       <div
         className="py-6 relative  overflow-  max-md:mx-2    rounded-2xl  
        bg-zinc-400/10
@@ -106,8 +119,7 @@ const Landing = () => {
               className="w-full flexcenter  border-none"
             >
               <CarouselContent className="  ">
-                {Array.from({ length: 4 }).map((_, i) =>(
-
+                {Array.from({ length: 4 }).map((_, i) => (
                   <CarouselItem
                     className="  basis-1/3 !ring-0 
                 !shadow-none h-[250px] max-md:h-[110px] max-md:w-[125px] w-[300px] border-none  min-w-[40%] !outline-none  relative"
@@ -133,7 +145,6 @@ const Landing = () => {
           view recent works{" "}
         </Button>
       </div>
-      
     </div>
   );
 };

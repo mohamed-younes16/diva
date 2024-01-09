@@ -57,7 +57,7 @@ const Testimonials = () => {
   }, [api]);
   return (
     <div className="w-full flexcenter flex-col gap-14 mb-32">
-      <h1 className="text-4xl font-bold">What clients say about us</h1>
+      <h1 className="text-4xl font-bold text-center">What clients say about us</h1>
       <Carousel setApi={setApi} opts={OPTIONS} className="w-full max-w-7xl ">
         <CarouselContent>
           {data.map((e, index) => (
