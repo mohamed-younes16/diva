@@ -108,14 +108,15 @@ const Perks = () => {
           </div>
         </div>
 
-        <div  id="benifits" className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]">
+        <div
+          id="benifits"
+          className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]"
+        >
           <m.h1
             initial={{ opacity: 0, x: 100 }}
             transition={{
               duration: 1,
               type: "spring",
-              stiffness: 250,
-              damping: 15,
             }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -128,8 +129,7 @@ const Perks = () => {
             transition={{
               duration: 1,
               type: "spring",
-              stiffness: 250,
-              damping: 15,
+              delay: 0.5,
             }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -180,10 +180,9 @@ const Perks = () => {
                     <m.h1
                       initial={{ opacity: 0, x: 100 }}
                       transition={{
+                        delay: i * 0.5,
                         duration: 1,
                         type: "spring",
-                        stiffness: 250,
-                        damping: 15,
                       }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -194,10 +193,9 @@ const Perks = () => {
                     <m.h1
                       initial={{ opacity: 0, x: -100 }}
                       transition={{
+                        delay: i * 0.5,
                         duration: 1,
                         type: "spring",
-                        stiffness: 250,
-                        damping: 15,
                       }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -251,7 +249,6 @@ const Perks = () => {
             <Button className="rounded-full bg-[linear-gradient(50deg,#FF536B,#FF536B)] ">
               Book 15-min call{" "}
             </Button>
-            
           </div>
         </div>
       </div>

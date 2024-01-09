@@ -4,7 +4,7 @@ const NavBar = () => {
   const links = [
     { name: "Work", id: "work" },
     { name: "Benifits", id: "benifits" },
-    { name: "Process", id: "process" },
+    { name: "testimonials", id: "testimonials" },
     { name: "Pricing", id: "pricing" },
   ];
 
