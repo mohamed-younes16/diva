@@ -1,9 +1,9 @@
 {
-  "name": "my-portfolio",
+  "name": "diva design",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev ",
+    "dev": "next dev --turbo",
     "build": "next build ",
     "start": "next start ",
     "lint": "next lint",
@@ -12,8 +12,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.2",
-    "@prisma/client": "^5.7.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-checkbox": "^1.0.4",
@@ -42,14 +40,9 @@
     "geist": "^1.2.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.288.0",
-    "next": "^14.0.4",
+    "next": "^14.1.0",
     "next-themes": "^0.2.1",
-    "query-string": "^8.1.0",
     "react": "^18.2.0",
-    "react-color": "^2.19.3",
-    "react-color-palette": "^7.1.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.47.0",
     "react-router-dom": "^6.15.0",
     "sharp": "^0.32.6",
     "sonner": "^1.0.3",

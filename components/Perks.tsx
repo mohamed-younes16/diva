@@ -110,7 +110,7 @@ const Perks = () => {
 
         <div
           id="benifits"
-          className="flexcenter gap-6 flex-col max-lg:mt-0 mt-[15dvh]"
+          className="flexcenter px-4 gap-6 flex-col max-lg:mt-0 mt-[15dvh]"
         >
           <m.h1
             initial={{ opacity: 0, x: 100 }}
@@ -120,7 +120,7 @@ const Perks = () => {
             }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className=" font-bold text-center text-5xl max-w-3xl"
+            className=" font-bold text-center text-5xl max-md:text-3xl max-w-3xl"
           >
             Awesome Membership Perks
           </m.h1>
@@ -147,7 +147,7 @@ const Perks = () => {
               key={e.title}
               className="px-10 max-lg:h-[350px] max-lg:w-[370px] h-[416px] mx-auto w-[410px]
               flexcenter bg-cover  transition-all rounded-3xl  duration-300  hover:scale-[101%]
-             bg-[url(/assets/card.png)]  flex-col"
+             bg-[url(/assets/card.avif)]  flex-col"
             >
               <Image
                 alt="image"

@@ -134,9 +134,9 @@ back in case you were curious."
                 <AccordionTrigger
                   className={`text-2xl max-md:text-lg  font-thin flex items-center justify-between gap-6`}
                 >
-                  <p className={` ${current === e.question && "text-red-600"}`}>
+                  <div className={` ${current === e.question && "text-red-600"}`}>
                     0{i + 1}
-                  </p>{" "}
+                  </div>{" "}
                   {e.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-200/90 text-lg pl-6">
@@ -177,6 +177,7 @@ back in case you were curious."
         <div className=" flex w-fit  gap-4 py-4">
           {socialLinks.map((e, i) => (
             <Link
+            aria-label="social link"
             target={"_blank"}
               href={e.link}
               key={i}

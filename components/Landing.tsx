@@ -16,10 +16,8 @@ export const OPTIONS: EmblaOptionsType = {
   dragFree: true,
 };
 const Landing = () => {
- 
-
   return (
-    <div className="pt-36 flex items-center  bg-center flex-col gap-6 bg-cover min-h-screen max-md:bg-[url(/assets/landing.png)]">
+    <div className="pt-36 flex items-center  bg-center flex-col gap-6 bg-cover min-h-screen max-md:bg-[url(/assets/landing-min.webp)]">
       <Image height={50} width={200} src={"/assets/logo.svg"} alt="diva logo" />
       <Image
         fill
@@ -38,7 +36,7 @@ const Landing = () => {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className=" font-bold text-center text-5xl max-w-3xl"
+        className=" font-bold text-center max-md:text-3xl text-5xl max-w-3xl"
       >
         One fixed fee a month gets you unlimited design goodness.
       </m.h1>
@@ -63,6 +61,7 @@ const Landing = () => {
         <Image
           src={`/assets/sand-clock.svg`}
           height={30}
+          className="animate-pulse"
           width={30}
           alt="sand clock"
         />
