@@ -147,7 +147,7 @@ const Perks = () => {
               key={e.title}
               className="px-10 max-lg:h-[350px] max-lg:w-[370px] h-[416px] mx-auto w-[410px]
               flexcenter bg-cover  transition-all rounded-3xl  duration-300  hover:scale-[101%]
-             bg-[url(/assets/card.avif)]  flex-col"
+             bg-[url(/assets/card.png)]  flex-col"
             >
               <Image
                 alt="image"
