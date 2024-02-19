@@ -68,9 +68,9 @@ const Landing = () => {
         <p>2 slots remaining</p>
       </div>
       <div
-        className="py-6 relative  overflow-  max-md:mx-2    rounded-2xl  
+        className="py-6 relative  overflow-  max-md:mx-2  overflow-hidden   rounded-2xl  
        bg-zinc-400/10
-      pb-24 flex items-center flex-col   "
+      pb-24 flex items-center flex-col    "
       >
         <Image
           loading="eager"
@@ -79,7 +79,7 @@ const Landing = () => {
           className="-z-10 backdrop-blur-xl"
           src={"/assets/carousel-min.webp"}
         />
-
+        <div className="absolute w-full h-full top-0 left-0 rounded-2xl z-20 pointer-events-none bg-[linear-gradient(90deg,#000000c8_0%,transparent_20%_80%,#000000c8_100%)]"></div>
         <m.div
           initial={{ opacity: 0 }}
           transition={{

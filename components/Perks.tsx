@@ -85,8 +85,9 @@ const Perks = () => {
           <div className="flex gap-6 w-full  ">
             <Carousel
               opts={OPTIONS}
-              className="w-full max-w-6xl mx-auto flexcenter  border-none"
+              className="w-full max-w-6xl mx-auto flexcenter relative  border-none"
             >
+              <div className="absolute w-full h-[200%] -top-1/2 left-0  blur-md lg:hidden z-20 pointer-events-none bg-[linear-gradient(90deg,#000000c8_0%,transparent_40%_60%,#000000c8_100%)]"></div>
               <CarouselContent className="  ">
                 {featuredBy.map((e, i) => (
                   <CarouselItem
