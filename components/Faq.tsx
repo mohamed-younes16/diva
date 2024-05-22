@@ -169,12 +169,12 @@ back in case you were curious."
         ))}
       </div>
       <div className="mt-16 flex flex-wrap justify-between px-5 py-6 max-w-7xl mx-auto items-center">
-        <p className="flexcenter max-md:gap-2 gap-6">
+        <p className="flexcenter max-md:gap-2 max-sm:flex-wrap gap-6">
           Copyright © 2023 DIVADSGN. All rights reserved
           <span className="text-zinc-400/80">Privacy Policy </span>
           <span className="text-zinc-400/80">Terms of Use</span>
         </p>
-        <div className=" flex w-fit  gap-4 py-4">
+        <div className=" flex w-fit max-sm:mx-auto gap-4 py-4">
           {socialLinks.map((e, i) => (
             <Link
             aria-label="social link"
